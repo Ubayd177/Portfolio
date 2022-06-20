@@ -1,0 +1,28 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+footer,
+header,
+html,
+body,
+div,
+span,
+head,
+section,
+nav,
+article,
+figure,
+li,
+a,
+img,
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	list-style: none;
+}

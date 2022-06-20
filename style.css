@@ -1,0 +1,411 @@
+/* BASIC FORMATTING */
+
+h1 {
+  color: rgb(0, 140, 209);
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+p {
+  font-weight: lighter;
+}
+
+article {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* INPUT FIELDS*/
+input[type="text"] {
+  padding: 0.5em;
+  width: 90%;
+  border-radius: 5% / 25%;
+}
+
+input[type="email"] {
+  padding: 0.5em;
+  width: 90%;
+  border-radius: 5% / 25%;
+}
+
+input[type="password"] {
+  padding: 0.5em;
+  width: 90%;
+  border-radius: 5% / 25%;
+}
+/*--INDEX HTML-- */
+/* MAIN NAVIGATION BAR */
+
+.main-header {
+  height: 3rem;
+}
+
+.top-navigation {
+  gap: 1em;
+  display: flex;
+}
+
+.top-navigation li a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+/* ACTIVE nav li */
+
+@media (max-width: 40em) {
+  /* NAV LIST REMOVED IN MOBILE MODE */
+  .top-navigation li a {
+    display: none;
+  }
+
+  /* HAMBURGER ICON APPEARS IN MOBILE MODE */
+  .hamburger-icon {
+    color: white;
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background-color: transparent;
+    aspect-ratio: 1;
+    height: 2em;
+    background-repeat: no-repeat;
+    background: url(img/hamburger-icon.svg);
+  }
+  section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* SECTIONS LAYOUT */
+section {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  /* background-color: lightf;
+	border-color: black; */
+}
+
+/* THE FIRST SECTION OF WEBSITE */
+.intro {
+  margin-top: 3rem;
+  display: flex;
+}
+/* TEXT PART */
+.me-short-description h1 {
+  font-size: 3rem;
+}
+
+.me-short-description p {
+  padding-top: 0.5em;
+  font-size: 1.5em;
+}
+
+.me-short-description p {
+  margin-top: 0.5rem;
+}
+
+/* BUTTONS */
+.buttons {
+  height: 10em;
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+
+.class-modules,
+.projects, .loginClick{
+  padding: 1em;
+  margin-top: 0.5em;
+  background-color: rgb(0, 140, 209);
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+
+.class-modules {
+  height: 1em;
+  width: 5em;
+  margin-right: 1em;
+  border-radius: 20% / 50%;
+}
+
+.projects {
+  height: 1em;
+  width: 5em;
+  border-radius: 20% / 50%;
+}
+
+.loginClick {
+  height: 1em;
+  width: 5em;
+  border-radius: 20% / 50%;
+  
+}
+/* --CLASS MODULES PAGE AND PROJECTS--*/
+/*modules block */
+.modules,
+.project, .loginClick {
+  display: flex;
+  justify-content: space-around;
+}
+/* INDIVIDUAL MODULE BOX*/
+.modulebox,
+.projectbox {
+  background-color: rgba(0, 55, 255, 0.03);
+  box-shadow: 0.2em 0.2em 1em rgba(0, 139, 209, 0.292);
+  width: 20rem;
+  height: 35em;
+}
+
+/* IMAGE INSIDE */
+.moduleimage,
+.projectimage {
+  align-items: center;
+}
+
+.moduleimage img,
+.projectimage img {
+  width: 98%;
+  height: 15em;
+  -webkit-filter: blur(0.07rem);
+  padding: 0.2em;
+}
+
+.module-description h1,
+.project-description h1,
+.module-description p,
+.project-description p {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 0.3em;
+}
+
+.module-description p,
+.project-description p {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
+/* MOBILE FOR CLASS MODULES PAGE*/
+@media (max-width: 81.25em) {
+  .modules,
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .modulebox,
+  .projectbox {
+    margin-bottom: 1em;
+  }
+
+  .module-description,
+  .project-description {
+    min-width: 0;
+  }
+}
+@media (max-width: 25em) {
+  .module-description p {
+    font-size: 0.7em;
+  }
+}
+/* --LOGIN and BLOG html-- */
+
+.login-block,
+.blog-block{
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20em;
+}
+
+.logoutBox{
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:10em;
+}
+
+.login-block label {
+  margin-top: 0.5em;
+  flex-basis: 7em;
+}
+
+/* MOBILE FOR BLOG AND LOGIN PAGE*/
+@media (max-width: 40em) {
+  .login-block label {
+    margin-top: 0.5em;
+    flex-basis: 0em;
+  }
+  .fieldline {
+    flex-direction: column;
+  }
+}
+
+.login-form,
+.blog-form {
+  background-color: rgba(0, 55, 255, 0.03);
+  box-shadow: 0.2em 0.2em 1em rgba(0, 139, 209, 0.292);
+  width: 20em;
+  padding: 1em;
+}
+
+.login-form h1,
+.blog-form h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.fieldline {
+  display: flex;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.submit-buttons {
+  display: flex;
+}
+.submit-buttons input[type="submit"], .submit-buttons input[type="reset"] {
+  color: white;
+  background-color: rgb(0, 140, 209);
+  text-transform: uppercase;
+  width: 50%;
+  margin: 0.1em;
+  margin-top: 3rem;
+  padding: 0.5em;
+  border-radius: 5% / 25%;
+}
+
+.blog-form input[name="blogContent"] {
+  height: 10em;
+  border-radius: 5% / 10%;
+}
+
+.blog-form input[name="blogTitle"] {
+  border-radius: 5% / 25%;
+}
+
+/* ABOUT ME*/
+.about,
+.education {
+  margin-top: 2em;
+}
+.about h1,
+.education h1 {
+  font-size: 2em;
+}
+
+.about p,
+.education p {
+  padding: 1em;
+  font-size: 1.1em;
+  background-color: rgba(0, 55, 255, 0.03);
+  box-shadow: 0.2em 0.2em 1em rgba(0, 139, 209, 0.292);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(0, 140, 209);
+}
+
+/* THE LOGIN FORM */
+.login-form{
+  background-color: rgba(0, 55, 255, 0.03);
+  box-shadow: 0.2em 0.2em 1em rgba(0, 139, 209, 0.292);
+  width: 20em;
+  padding: 1em;
+
+}
+
+/* THE BUTTON FOR ADDING AN ENTRY IN ADMIN PANEL AND LOGGING OUT */
+
+.panelView{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+
+
+}
+
+.userCheck{
+  background-color: rgba(0, 15, 67, 0.8);
+  padding: 2em;
+  color: white;
+  border-radius: 1% / 5%;
+}
+
+.logout-form input[type="submit"] {
+  color: white;
+  background-color: rgb(209, 0, 0);
+  text-transform: uppercase;
+  border-radius: 10% / 25%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+}
+.entryDirect{
+  padding: 1em;
+  margin-top: 2em;
+  background-color: rgb(0, 140, 209);
+  color: white;
+  display: block;
+  text-decoration: none;
+  height: 1em;
+  width: 5em;
+  border-radius: 20% / 50%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* THE VIEWING OF BLOGS */
+
+.panelBlogs{
+  margin-top:4rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.individualPanel{
+  padding: 1em;
+  margin-top: 1em;
+  height: 10em;
+  background-color: rgba(0, 55, 255, 0.03);
+  box-shadow: 0.2em 0.2em 1em rgba(0, 139, 209, 0.292);
+  word-wrap: break-word;
+  word-break: break-word;
+  flex-direction: column;
+}
+
+.time {
+  color: rgb(209, 0, 0);
+  font-size: 0.7em;
+}
+
+.title {
+  font-size: 1.3em;
+  color:rgb(0, 140, 209);
+}
+
+.content{
+  margin-top: 1em;
+  font-size: 0.8em;
+  color: black;
+} 
